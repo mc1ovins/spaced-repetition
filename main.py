@@ -5,15 +5,11 @@ from screens.add_deck import add_deck
 from screens.home import home
 
 
-# Create game object
-WIN = pg.display.set_mode((WIDTH, HEIGHT))
-game = Game(WIDTH, HEIGHT, TITLE, [home, add_deck])
-
-game.play_audio("assets/song.webm")
-game.update_streak()
-
-
 def main():
+    game = Game(WIDTH, HEIGHT, TITLE, [home, add_deck])
+    game.play_audio("assets/song.webm")
+    game.update_streak()
+
     run = True
     clock = pg.time.Clock()
 
